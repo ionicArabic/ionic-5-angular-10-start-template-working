@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
   name: string ;
-  birthYear;
+  birthYear: number;
   age: number;
 
   constructor() {}
@@ -21,5 +21,11 @@ export class Tab2Page {
     this.birthYear = undefined;
     this.age = undefined;
 
+  }
+
+  disabled() {
+    if (!this.name||!this.birthYear) {
+      return true;
+    } else return false;
   }
 }

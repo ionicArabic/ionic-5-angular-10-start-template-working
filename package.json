@@ -19,6 +19,7 @@
     "@ionic-native/status-bar": "^5.27.0",
     "@ionic/angular": "^5.3.1",
     "core-js": "^3.6.5",
+    "rebuild": "^0.1.2",
     "rxjs": "^6.6.2",
     "typescript": "^3.9.7",
     "zone.js": "^0.10.3"
