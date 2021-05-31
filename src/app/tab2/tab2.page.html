@@ -1,33 +1,36 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-title>
-      Age Calculator
+      حاسبة العمر
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
   <ion-item>
-    <ion-label position="floating"> Name </ion-label>
+    <ion-label position="floating"> الاسم </ion-label>
     <ion-input [(ngModel)]="name"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label position="floating"> Birth Year </ion-label>
+    <ion-label position="floating"> سنة الميلاد </ion-label>
     <ion-input [(ngModel)]="birthYear"></ion-input>
   </ion-item>
 
   <ion-card>
     <ion-card-header>
-      <ion-card-subtitle>Hello</ion-card-subtitle>
+      <ion-card-subtitle>مرحبا...</ion-card-subtitle>
       <ion-card-title>{{ name }}</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
-      <p>Your birth year is: {{birthYear}}</p>
-      <h1>age is: <span> {{age}} </span></h1>
+      <p>سنة ميلادك: {{birthYear}}</p>
+      <h1>عمرك: <span *ngIf="age"> {{age}} </span></h1>
     </ion-card-content>
   </ion-card>
 
-  <ion-button expand="block" (click)="calcAge()"> Calculate Age </ion-button>
+  <ion-button [disabled]="!birthYear" expand="block" (click)="calcAge()"> احسب العمر </ion-button>
+  <ion-button *ngIf="age" expand="block" color="danger" (click)="reset()">
+    حذف البيانات
+  </ion-button>
 </ion-content>

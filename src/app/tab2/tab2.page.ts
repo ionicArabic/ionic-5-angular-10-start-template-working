@@ -6,13 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-  name: string = 'Mousa';
-  birthYear: number = 1986;
-  age: number = 0;
+  name: string ;
+  birthYear;
+  age: number;
 
   constructor() {}
 
   calcAge() {
     this.age = 2021 - this.birthYear;
+  }
+
+  reset() {
+    this.name = "";
+    this.birthYear = undefined;
+    this.age = undefined;
+
   }
 }
