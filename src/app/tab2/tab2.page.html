@@ -34,7 +34,8 @@
     </ion-card-header>
 
     <ion-card-content>
-      <p>سنة ميلادك: {{birthYear}}</p>
+      <p>سنة ميلادك: {{birthYear}}  <span *ngIf="rongDate" >{{rongDate}}</span></p>
+     
       <h1>عمرك: <span *ngIf="age"> {{age}} </span></h1>
     </ion-card-content>
   </ion-card>
